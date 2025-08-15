@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>قائمة الإنذارات</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="header">
+    <h1 class="brand">الإنذارات</h1>
+    <div id="logo-container" onclick="window.location.href='index.html'" title="العودة للرئيسية">
+      <div class="alert-icon">🏠</div>
+    </div>
+  </div>
+
+  <div class="card alerts-page">
+    <div class="alerts-toolbar">
+      <span id="alerts-count-label">عدد الإنذارات: 0</span>
+      <button id="clear-alerts-btn" class="danger">مسح كل الإنذارات المؤقتة</button>
+    </div>
+
+    <div id="alerts-list"></div>
+    <div class="footer-links">
+      <a href="index.html">⬅ العودة للرئيسية</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

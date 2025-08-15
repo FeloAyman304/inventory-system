@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>نظام المخزون</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- شريط علوي + أيقونة إنذارات -->
+  <div id="header">
+    <h1 class="brand">Romany Store</h1>
+    <div id="logo-container" onclick="goToAlerts()" title="عرض الإنذارات">
+      <div class="alert-icon">🔔<span id="alert-count">0</span></div>
+    </div>
+  </div>
+
+  <!-- إضافة منتج -->
+  <form id="productForm" class="card">
+    <h3>➕ إضافة/تحديث منتج</h3>
+    <div class="row">
+      <input type="text" id="name" placeholder="اسم المنتج" required />
+      <input type="text" id="id" placeholder="الرقم الفريد" required />
+      <input type="number" id="quantity" placeholder="الكمية" min="1" required />
+      <button type="submit">حفظ</button>
+    </div>
+    <small class="hint">* لو الاسم والرقم الفريد نفس الموجود: هنزوّد الكمية بدل ما نكرّر المنتج.</small>
+  </form>
+
+  <!-- سحب منتج -->
+  <form id="sellForm" class="card">
+    <h3>📤 سحب منتج</h3>
+    <div class="row">
+      <input type="text" id="sellId" placeholder="الرقم الفريد" required />
+      <input type="number" id="sellAmount" placeholder="الكمية" min="1" required />
+      <button type="submit">سحب</button>
+    </div>
+  </form>
+
+  <!-- جدول المنتجات -->
+  <div class="card">
+    <h3>📋 المنتجات</h3>
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>اسم المنتج</th>
+          <th>الرقم</th>
+          <th>الكمية</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <button id="deleteAllBtn">🗑️ حذف الكل</button>
+  <script src="script.js"></script>
+</body>
+</html>
